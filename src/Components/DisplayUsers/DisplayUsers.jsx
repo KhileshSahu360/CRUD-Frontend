@@ -70,6 +70,7 @@ const DisplayUsers = ({getUserData}) => {
 
 const UserDataInRow = (props) => {
   const errorNotify = () => toast.error("Data Deletion Failed!");
+  const BACKEND_URL = "https://crud-backend-1-7tn7.onrender.com" 
 
   const handleDelete = (id) => {
     Swal.fire({
@@ -84,7 +85,7 @@ const UserDataInRow = (props) => {
       if (result.isConfirmed) {
         try {
           let response = await fetch(
-            `http://localhost:3001/DeleteUserData/${id}`,
+            `${BACKEND_URL}/DeleteUserData/${id}`,
             {
               method: "delete",
             }

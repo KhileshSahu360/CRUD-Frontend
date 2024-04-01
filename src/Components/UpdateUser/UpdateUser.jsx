@@ -11,6 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 const UpdateUser = () => {
   const { id } = useParams();
+  const BACKEND_URL = "https://crud-backend-1-7tn7.onrender.com" 
   const errorNotify = (msg) => toast.error(msg);
   const successNotify = () => toast.success("Data updated successfully!");
 
@@ -21,7 +22,7 @@ const UpdateUser = () => {
   const ageRef = useRef(0);
   const emailRef = useRef("");
   const getDataWithId = async () => {
-    let response = await fetch(`http://localhost:3001/GetDataWithId/${id}`);
+    let response = await fetch(`${BACKEND_URL}/GetDataWithId/${id}`);
     response = await response.json();
     tempName = nameRef.current.value = response[0].name;
     tempAge = ageRef.current.value = response[0].age;
@@ -42,7 +43,7 @@ const UpdateUser = () => {
     if(!(tempName == name) || !(tempAge == age) || !(tempEmail == email)){
       setLoading(true);
       try{
-        let response = await fetch(`http://localhost:3001/UpdateUserData/${id}`, {
+        let response = await fetch(`${BACKEND_URL}/UpdateUserData/${id}`, {
         method: "put",
         headers: {
           "Content-Type": "application/json",

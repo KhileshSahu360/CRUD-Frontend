@@ -11,16 +11,16 @@ import { useDispatch } from 'react-redux';
 
 function App() {
   const searchRef = useRef('');
-
+  const BACKEND_URL = "https://crud-backend-1-7tn7.onrender.com" 
   const dispatch = useDispatch();
   const getUserData = async () => {
-    const rawResponse = await fetch("http://localhost:3001/userDetails");
+    const rawResponse = await fetch(`${BACKEND_URL}/userDetails`);
     const response = await rawResponse.json();
     dispatch(userAction.setData(response));
   };
   
   const getUserDataWithTheKey = async(key) => {
-    const rawResponse = await fetch(`http://localhost:3001/SearchData/${key}`);
+    const rawResponse = await fetch(`${BACKEND_URL}/SearchData/${key}`);
     const response = await rawResponse.json();
     dispatch(userAction.setData(response));
   } 

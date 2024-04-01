@@ -8,6 +8,7 @@ import { useDispatch } from 'react-redux';
 import 'react-toastify/dist/ReactToastify.css';
 
 const AddUser = () => {
+  const BACKEND_URL = "https://crud-backend-1-7tn7.onrender.com" 
   const dispatch = useDispatch();
   const nameRef = useRef('');
   const ageRef = useRef(0);
@@ -26,7 +27,7 @@ const AddUser = () => {
     if(email && age && name){
       setLoading(true);
       try{
-        let response = await fetch('http://localhost:3001/AdduserData',{
+        let response = await fetch(`${BACKEND_URL}/AdduserData`,{
           method : 'post',
           headers:{
             'Content-Type':'application/json'
