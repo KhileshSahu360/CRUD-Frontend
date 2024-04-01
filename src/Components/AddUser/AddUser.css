@@ -1,0 +1,70 @@
+.add-user{
+  width: 80vw;
+  height: 550px;
+  background-color: #e6e6e6;
+  display: flex;
+  border-top-left-radius:15px ;
+  border-top-right-radius:15px ;
+  flex-direction: column;
+  gap: 5rem;
+  align-items: center;
+}
+.add_user_container{
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  gap: 2rem;
+}
+.add_user_container input{
+  padding: .5rem;
+  border: 1px solid black;
+  position: relative;
+}
+.add_user_container button{
+  border: none;
+  padding: .5rem;
+  background-color: #52025b;
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+}
+.loader-div{
+  position: absolute;
+  bottom: 25.4%;
+  left: 49%;
+}
+@media screen  and (max-width:1000px){
+  .add_user_container{
+    width: 40%;
+  }
+  
+}
+@media screen and (max-width:750px){
+  .add-user{
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0px !important;
+    gap: 10rem;
+  }
+  .Header{
+    border-radius: 0px !important;
+  }
+  .add_user_container{
+    width: 90%;
+    gap: 5rem;
+  }
+  .custom-toast{
+    font-size: 2rem !important;
+  }
+}
+@media screen and (max-width:500px) {
+  .add_user_container input{
+    padding: 1.5rem;
+    font-size: 1.5rem;
+  }
+  .add_user_container button{
+    padding: 1.5rem;
+    font-size: 1.5rem;
+  }
+}

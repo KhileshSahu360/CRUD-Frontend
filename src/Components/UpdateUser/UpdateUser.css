@@ -1,0 +1,65 @@
+.update-user{
+  width: 80vw;
+  height: 550px;
+  background-color: #e6e6e6;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  align-items: center;
+}
+.update_user_container{
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  gap: 2rem;
+}
+.update_user_container input{
+  padding: .5rem;
+  border: 1px solid black;
+}
+.update_user_container button{
+  padding: .5rem;
+  border: none;
+  background-color: #035818;
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+}
+.custom-toast{
+  font-size: .8rem;
+}
+@media screen  and (max-width:1000px){
+  .update_user_container{
+    width: 40%;
+  }
+  
+}
+@media screen and (max-width:750px){
+  .update-user{
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0px !important;
+    gap: 10rem;
+  }
+  .Header{
+    border-radius: 0px !important;
+  }
+  .update_user_container{
+    width: 90%;
+    gap: 5rem;
+  }
+  .custom-toast{
+    font-size: 2rem !important;
+  }
+}
+@media screen and (max-width:500px) {
+  .update_user_container input{
+    padding: 1.5rem;
+    font-size: 1.5rem;
+  }
+  .update_user_container button{
+    padding: 1.5rem;
+    font-size: 1.5rem;
+  }
+}
